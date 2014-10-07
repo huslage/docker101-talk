@@ -10,6 +10,6 @@ redis = Redis(
 @app.route('/')
 def hello():
     redis.incr('hits')
-    return '<pre>hey everyone!  i have been seen %s times.</pre>' % redis.get('hits')
+    return '<pre>Hey everyone! I have been seen %s times.</pre>' % redis.get('hits')
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
